@@ -1195,11 +1195,11 @@ h1 {
 }
 
 h3 {
-    font-size: 14pt !important;
-    font-weight: 400 !important;
-    color: #6b7280 !important;
-    margin: 0 0 16px 0 !important;
-    text-align: center !important;
+    font-size: 13pt !important;
+    font-weight: 600 !important;
+    color: #1e40af !important;
+    margin: 16px 0 4px 0 !important;
+    text-align: left !important;
 }
 
 h6 {
