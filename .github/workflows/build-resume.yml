@@ -52,6 +52,14 @@ jobs:
           weasyprint resume.html resume.pdf
           echo "✓ resume.pdf generated"
 
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p deploy
+          cp resume.html deploy/
+          cp resume.pdf deploy/
+          cp resume-stylesheet.css deploy/
+          echo "✓ Deployment directory prepared"
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -65,6 +73,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./deploy
           publish_branch: gh-pages
-          exclude_assets: '.github,requirements.txt,Makefile,README.md,.gitignore'
