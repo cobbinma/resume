@@ -1398,3 +1398,16 @@ h3 + p + p + h3 {
     margin: 16px 0 4px 0 !important;
     text-align: left !important;
 }
+
+/* Hide Pandoc's auto-generated title (from YAML frontmatter) */
+.title {
+    display: none !important;
+}
+
+header.title {
+    display: none !important;
+}
+
+h1.title {
+    display: none !important;
+}
