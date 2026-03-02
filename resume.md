@@ -3,7 +3,7 @@ margin-left: 2cm
 margin-right: 2cm
 margin-top: 1cm
 margin-bottom: 2cm
-title: Matthew Cobbing - Technical Lead Resume
+title: Matthew Cobbing - Technical Lead
 description-meta: 'Technical Lead with 7+ years of experience building reliable, scalable, and maintainable web platforms'
 keywords:
   - 'Go'
@@ -17,6 +17,9 @@ author:
 - Matthew Cobbing
 subject: 'Resume'
 ---
+
+# Matthew Cobbing
+### Technical Lead
 
 ###### [[cobbing.dev](https://www.cobbing.dev/)] . [matthew@cobbing.dev](mailto:matthew@cobbing.dev) . [GitHub](https://github.com/cobbinma) . [LinkedIn](https://www.linkedin.com/in/cobbing/) . [Medium](https://medium.com/@cobbinma)
 ###### London, United Kingdom
