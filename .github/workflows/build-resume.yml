@@ -1,0 +1,70 @@
+name: Build and Deploy Resume
+
+on:
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches:
+      - main
+    paths:
+      - 'resume.md'
+      - 'resume-stylesheet.css'
+      - '.github/workflows/build-resume.yml'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-22.04
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          # Install Pandoc
+          wget https://github.com/jgm/pandoc/releases/download/3.6.4/pandoc-3.6.4-1-amd64.deb
+          sudo apt install ./pandoc-3.6.4-1-amd64.deb
+          
+          # Install WeasyPrint
+          pip install -r requirements.txt
+          
+          # Verify installations
+          pandoc --version
+          weasyprint --version
+
+      - name: Generate HTML
+        run: |
+          pandoc resume.md -f markdown -t html -c resume-stylesheet.css -s -o resume.html
+          echo "✓ resume.html generated"
+
+      - name: Generate PDF
+        run: |
+          weasyprint resume.html resume.pdf
+          echo "✓ resume.pdf generated"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: matthew-cobbing-resume
+          path: |
+            resume.html
+            resume.pdf
+            resume-stylesheet.css
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          exclude_assets: '.github,requirements.txt,Makefile,README.md,.gitignore'
