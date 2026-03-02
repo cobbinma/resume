@@ -18,6 +18,9 @@ author:
 subject: 'Resume'
 ---
 
+# Matthew Cobbing
+### Technical Lead
+
 ###### [[cobbing.dev](https://www.cobbing.dev/)] . [matthew@cobbing.dev](mailto:matthew@cobbing.dev) . [GitHub](https://github.com/cobbinma) . [LinkedIn](https://www.linkedin.com/in/cobbing/) . [Medium](https://medium.com/@cobbinma)
 ###### London, United Kingdom
 
