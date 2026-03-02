@@ -30,7 +30,7 @@ I'm a Technical Lead with 7+ years of experience building reliable, scalable, an
 
 ## Skills
 
-**Programming Languages**: Go, Rust, TypeScript, JavaScript, Java
+**Programming Languages**: Go, Rust, TypeScript
 
 **Backend & Architecture**: Microservices, RESTful APIs, GraphQL, gRPC, Event-Driven Architecture, Test-Driven Development
 
