@@ -1163,3 +1163,208 @@ sub {
 .author {
     display: none
 }
+/* ====================================================================
+   MODERN RESUME BUILDER OVERRIDES - Professional Design
+   ==================================================================== */
+
+/* Enhanced Body & Container */
+html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    color: #1f2937 !important;
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    padding: 40px 50px !important;
+    background: #ffffff !important;
+}
+
+/* Modern Typography Hierarchy */
+h1 {
+    font-size: 32pt !important;
+    font-weight: 700 !important;
+    color: #1e3a8a !important;
+    margin: 0 0 4px 0 !important;
+    letter-spacing: -0.5px !important;
+    text-align: center !important;
+}
+
+h3 {
+    font-size: 14pt !important;
+    font-weight: 400 !important;
+    color: #6b7280 !important;
+    margin: 0 0 16px 0 !important;
+    text-align: center !important;
+}
+
+h6 {
+    font-size: 9pt !important;
+    color: #6b7280 !important;
+    margin: 3px 0 !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+}
+
+/* Contact Links Styling */
+h6 a {
+    color: #2563eb !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+h6 a:hover {
+    color: #1e40af !important;
+}
+
+/* Section Headers (Skills, Experience, etc) */
+h2 {
+    font-size: 13pt !important;
+    font-weight: 700 !important;
+    color: #1e3a8a !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin: 24px 0 12px 0 !important;
+    padding-bottom: 6px !important;
+    border-bottom: 2px solid #3b82f6 !important;
+}
+
+/* Job Titles / Company Names */
+h3 + p {
+    margin-top: 0 !important;
+}
+
+h2 + p strong {
+    font-size: 11pt !important;
+    color: #1f2937 !important;
+}
+
+/* Experience Section Styling */
+h2:not(:first-of-type) {
+    margin-top: 20px !important;
+}
+
+/* Subsection Headers (Job Title + Company) */
+h3 + h3 {
+    margin-top: -8px !important;
+}
+
+/* Paragraphs and Content */
+p {
+    margin: 8px 0 !important;
+    color: #374151 !important;
+    font-size: 10.5pt !important;
+    line-height: 1.5 !important;
+}
+
+/* Strong/Bold Text (Job titles, dates) */
+strong {
+    font-weight: 600 !important;
+    color: #1f2937 !important;
+}
+
+/* Lists (Responsibilities, Skills) */
+ul {
+    margin: 8px 0 12px 0 !important;
+    padding-left: 20px !important;
+}
+
+ul li {
+    margin: 4px 0 !important;
+    color: #374151 !important;
+    font-size: 10.5pt !important;
+    line-height: 1.4 !important;
+}
+
+ul li::marker {
+    color: #3b82f6 !important;
+}
+
+/* Links */
+a {
+    color: #2563eb !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #1e40af !important;
+    text-decoration: underline !important;
+}
+
+/* Visual Separators */
+hr {
+    border: none !important;
+    border-top: 1px solid #e5e7eb !important;
+    margin: 16px 0 !important;
+}
+
+/* Print Optimizations */
+@media print {
+    body {
+        padding: 30px 40px !important;
+        max-width: 100% !important;
+    }
+    
+    h1 {
+        font-size: 28pt !important;
+    }
+    
+    h2 {
+        page-break-after: avoid !important;
+        font-size: 12pt !important;
+    }
+    
+    h3 {
+        page-break-after: avoid !important;
+        font-size: 13pt !important;
+    }
+    
+    ul {
+        page-break-inside: avoid !important;
+    }
+    
+    li {
+        page-break-inside: avoid !important;
+    }
+}
+
+/* Professional Section Spacing */
+h2:first-of-type {
+    margin-top: 20px !important;
+}
+
+/* Impact/Achievement sections */
+p + p {
+    margin-top: 10px !important;
+}
+
+/* Technologies Footer */
+p strong:last-of-type {
+    color: #4b5563 !important;
+}
+
+/* Better spacing between experience entries */
+h3 ~ h3 {
+    margin-top: 20px !important;
+}
+
+/* Clean list presentation */
+ul ul {
+    margin-top: 4px !important;
+}
+
+/* Header Contact Section Polish */
+body > h6:first-of-type {
+    margin-bottom: 2px !important;
+}
+
+body > h6:nth-of-type(2) {
+    margin-top: 2px !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 16px !important;
+    border-bottom: 1px solid #e5e7eb !important;
+}
