@@ -55,7 +55,8 @@ jobs:
       - name: Prepare deployment directory
         run: |
           mkdir -p deploy
-          cp resume.html deploy/
+          cp resume.html deploy/index.html
+          cp resume.html deploy/resume.html
           cp resume.pdf deploy/
           cp resume-stylesheet.css deploy/
           echo "✓ Deployment directory prepared"
